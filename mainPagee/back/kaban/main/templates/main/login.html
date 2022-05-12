@@ -1,0 +1,43 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'main/css/loginCSS.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Kanban</title>
+    </head>
+    <body>
+        <h1 class="header">Kanban</h1>
+        <div>
+            <img src="{% static 'main/img/boar.png'%}" alt="" class="boar">
+        </div>
+        <div class="signIn">
+            <h3>Вход в Kanban</h3>
+            <!--<div>
+                <p><input class="email" placeholder="Введите имя пользователя" type="text" name="userEmail" value=""></p>
+            </div>
+            <div>
+                <p><input class="password" placeholder="Введите пароль" type="password"  name="passWord" value=""></p>
+            </div>-->
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+                <button class="register" type="submit">Войти</button>
+                <!--<div class="enterCont">
+                    <a href="file:///C:/Users/user/Desktop/mainPagee/mainPagee/main.html" style="text-decoration: none;">
+                    <p class="enter">Войти</p>
+                    </a>
+                </div>-->
+            </form>
+            <p class="info" style="position: relative; top: 35px; left: 50px;"><a href="">Забыли пароль?</a></p>
+            <p class="info" style="position: relative; top: 9px; left: 175px;"><a href="{% url 'reg'%}">Зарегистрироваться</a></p>
+        </div>
+    </body>
+</html>

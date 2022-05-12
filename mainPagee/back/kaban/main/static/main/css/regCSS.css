@@ -1,0 +1,172 @@
+body
+{
+    background-color: #fff5f7;
+    height: 700px;
+    width: 1080px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+}
+
+h3
+{
+    position: relative;
+    top: 15px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5C5959;
+}
+
+.group
+{
+    position: absolute;
+    width: 530px;
+    height: 370px;
+    left: 40px;
+    top: 570px;
+    border-radius: 0px;
+    Opacity: 75%;
+}
+
+.rightGroup
+{
+    position: absolute;
+    height: 480px;
+    width: 490px;
+    left: 1030px;
+    top: 520px;
+    border-radius: 0px;
+    Opacity: 80%;
+}
+
+.header
+{
+    position: absolute;
+    height: 60px;
+    width: 220px;
+    left: 705px;
+    top: 80px;
+    border-radius: nullpx;
+    font-family: Roboto;
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.boar
+{
+    position: absolute;
+    height: 90px;
+    width: 125px;
+    left: 590px;
+    top: 115px;
+    border-radius: 0px;    
+}
+
+.signIn
+{
+    position: absolute;
+    width: 340px;
+    height: 410px;
+    left: 600px;
+    top: 230px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+input
+{
+    height: 40px;
+    width: 260px;
+    border-radius: 5px;
+}
+
+.email
+{   
+    position: relative;
+    left: 35px;
+    top: 20px;
+}
+
+.password
+{
+    position: relative;
+    left: 35px;
+    top: 25px;   
+}
+
+.repeatPassword
+{
+    position: relative;
+    left: 35px;
+    top: 30px;   
+}
+
+.name
+{
+    position: relative;
+    left: 35px;
+    top: 35px;   
+}
+
+.enterCont
+{
+    position: relative;
+    width: 270px;
+    height: 40px;
+    left: 35px;
+    top: 35px;
+    background: #00A3FF;
+    border-radius: 5px;
+}
+
+.enter
+{
+    position: relative;
+    top: 8px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.info
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #0038FF;
+}
+
+.register
+{
+    background: #8787dc;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    color: #fefefe;
+    border-radius: 3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+    margin-left: 63px;
+    width: 65%;
+}

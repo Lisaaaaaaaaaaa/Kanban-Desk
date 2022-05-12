@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+        <link rel="stylesheet" href="{% static 'main/css/mainCSS.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Kanban</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="boards">
+                <div class="boards__item">
+                        <span contenteditable="true" class="title">Введите название</span>
+                    <div class="list">
+                        <div class="list__item" draggable="true">Стартовая карточка</div>
+                        {% for el in card %}
+                            <div class="list__item" draggable="true">{{ el.text }}</div>
+                        {% endfor %}
+                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form">
+                            <!--<textarea class="textarea" placeholder="Введите название карточки"></textarea>-->
+                            {{ form.text }}
+
+                            <div class="buttons">
+                                <button class="add__item-btn" type="submit">Добавить карточку</button>
+                                <button class="cancel__item-btn">Отмена</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="add__btn"><span> + </span>Добавить карточку</div>
+
+                </div>
+                {% for el in column %}
+                    <div class="boards__item">
+                        <span contenteditable="true" class="title">{{ el.title }}</span>
+                        <div class="list">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+                <div class="button" type="submit">Добавить колонку</div>
+        </div>
+        <script src="{% static 'main/js/mainJS.js'%}"></script>
+    </body>
+</html>

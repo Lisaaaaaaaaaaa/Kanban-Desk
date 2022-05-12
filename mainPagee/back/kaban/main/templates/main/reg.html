@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'main/css/regCSS.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Kanban</title>
+    </head>
+    <body>
+        <h1 class="header">Kanban</h1>
+        <div>
+            <img src="{% static 'main/img/boar.png'%}" alt="" class="boar">
+        </div>
+        <div class="signIn">
+            <h3>Регистрация в Kanban</h3>
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    <p>{{ user_form.email }}</p>
+                </div>
+                <div>
+                    <p>{{ user_form.password1 }}</p>
+                </div>
+                <div>
+                    <p>{{ user_form.password2 }}</p>
+                </div>
+                <div>
+                    <p>{{ user_form.username }}</p>
+                </div>
+                    <button class="register" type="submit">Зарегистрироваться</button>
+                    <!--<div class="enterCont">
+                        <a href="https://www.google.com/" style="text-decoration: none;">
+                        <p class="enter">Зарегистрироваться</p>
+                        </a>
+                    </div>-->
+            </form>
+                <p class="info" style="position: relative; top: 35px; left: 120px;"><a href="{% url 'home'%}">Уже есть аккаунт</a></p>
+        </div>
+    </body>
+</html>

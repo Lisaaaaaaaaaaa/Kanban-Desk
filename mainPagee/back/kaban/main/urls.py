@@ -16,6 +16,9 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
-    path('', views.index)
+    path('', views.user_login, name='home'),
+    path('kaban', views.index, name='kaban'),
+    path('reg', views.register, name='reg')
 ]
