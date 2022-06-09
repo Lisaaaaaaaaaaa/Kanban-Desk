@@ -1,0 +1,63 @@
+body
+{
+    background-color: #fff5f7;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+}
+
+h3
+{
+    position: relative;
+    top: 15px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5C5959;
+}
+
+.group
+{
+    position: absolute;
+    width: 530px;
+    height: 370px;
+    left: 40px;
+    top: 570px;
+    border-radius: 0px;
+    Opacity: 75%;
+}
+
+.signIn
+{
+    position: absolute;
+    width: 340px;
+    height: 290px;
+    left: 600px;
+    top: 230px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.register
+{
+    background: #8787dc;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    color: #fefefe;
+    border-radius: 3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+    margin-left: 63px;
+    width: 65%;
+}

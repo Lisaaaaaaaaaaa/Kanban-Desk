@@ -94,6 +94,22 @@ input
     top: 20px;
 }
 
+.email_1
+{   
+    display: inline;
+    position: relative;
+    left: 55px;
+    top: 20px;
+}
+
+.num
+{   
+    position: relative;
+    left: 35px;
+    top: 20px;
+    width: 35px;
+}
+
 .password
 {
     position: relative;

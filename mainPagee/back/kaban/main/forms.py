@@ -1,13 +1,13 @@
-from .models import Card
+from .models import Card, Elemet
 from .models import Column
-from django.forms import EmailInput, ModelForm, PasswordInput, TextInput, Textarea
+from django.forms import CharField, EmailInput, IntegerField, ModelForm, PasswordInput, TextInput, Textarea
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django import forms
 
 class CardForm(ModelForm):
     class Meta:
-        model = Card
+        model = Elemet
         fields = ['text']
 
         widgets = {
@@ -28,6 +28,24 @@ class ColumnForm(ModelForm):
                 'placeholde': 'Введите название'
             })
         }
+
+class ElemForm(ModelForm):
+    num = forms.IntegerField(label='Номер колонки',
+                               widget=forms.TextInput(attrs={'class' : 'email', 'placeholder': 'Номер колонки', 'style': 'width: 35px; left: 140px;'}))                                       
+    class Meta:
+        model = Elemet
+        fields = ('num', 'text')
+
+        widgets = {
+            "text": Textarea (attrs={
+                'class' : 'email',
+                'placeholde': 'Введите название карточки',
+                #'style' : 'width: 200px; margin-top: -180px; margin-left: 60px'
+                #'style' : 'width: 200px; margin-left: 90px; margin-bottom: 40px'
+                'style' : 'height: 90px; width: 270px; border-radius: 3px; border-width: 3px; resize: none;'
+            })
+        }
+
 
 class RegisterForm(UserCreationForm):
     username = forms.CharField(label='Имя пользователя',

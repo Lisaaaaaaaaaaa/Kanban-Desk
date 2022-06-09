@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'main/css/loginCSS.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Kanban</title>
+    </head>
+    <body>
+        <h1 class="header">Kanban</h1>
+        <div>
+            <img src="{% static 'main/img/boar.png'%}" alt="" class="boar">
+        </div>
+        <div class="signIn" style="height: 200px;">
+            <h3>Вы точно хотите удалить карточку?</h3>
+            <form method="post">
+            {% csrf_token %}
+            <button class="register" style="margin-top: 25px; background-color: rgb(212, 39, 88);">Подтвердить удаление</button>
+            </form>
+            <a href="{% url 'kaban' %}"><button class="register" style="margin-top: 15px;">Отменить удаление</button></a>
+        </div>
+    </body>
+</html>

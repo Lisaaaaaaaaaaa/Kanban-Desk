@@ -16,11 +16,15 @@
         <div class="app">
             <div class="boards">
                 <div class="boards__item">
-                        <span contenteditable="true" class="title">Введите название</span>
+                        <span contenteditable="true" class="title">Стек задач - 1</span>
                     <div class="list">
-                        <div class="list__item" draggable="true">Стартовая карточка</div>
                         {% for el in card %}
-                            <div class="list__item" draggable="true">{{ el.text }}</div>
+                            <div class="list__item" draggable="true">{{ el.text }}
+                                <div>
+                                    <a href="{% url 'update' pk=el.id%}"><button style="border-radius: 3px; background: rgb(135, 135, 220); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">⚙</button></a>
+                                    <a href="{% url 'delete' pk=el.id%}"><button style="border-radius: 3px; background: rgb(191, 75, 89); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">🗑</button></a>
+                                </div>
+                            </div>
                         {% endfor %}
                     </div>
                     <form method="post">
@@ -37,15 +41,46 @@
                     <div class="add__btn"><span> + </span>Добавить карточку</div>
 
                 </div>
-                {% for el in column %}
                     <div class="boards__item">
-                        <span contenteditable="true" class="title">{{ el.title }}</span>
+                        <span contenteditable="true" class="title">Надо сделать - 2</span>
                         <div class="list">
+                            {% for el in card_2 %}
+                            <div class="list__item" draggable="true">{{ el.text }}
+                                <div>
+                                    <a href="{% url 'update' pk=el.id%}"><button style="border-radius: 3px; background: rgb(135, 135, 220); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">⚙</button></a>
+                                    <a href="{% url 'delete' pk=el.id%}"><button style="border-radius: 3px; background: rgb(191, 75, 89); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">🗑</button></a>
+                                </div>
+                            </div>
+                        {% endfor %}
                         </div>
                     </div>
-                {% endfor %}
+                    <div class="boards__item">
+                        <span contenteditable="true" class="title">Делаю - 3</span>
+                        <div class="list">
+                            {% for el in card_3 %}
+                            <div class="list__item" draggable="true">{{ el.text }}
+                                <div>
+                                    <a href="{% url 'update' pk=el.id%}"><button style="border-radius: 3px; background: rgb(135, 135, 220); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">⚙</button></a>
+                                    <a href="{% url 'delete' pk=el.id%}"><button style="border-radius: 3px; background: rgb(191, 75, 89); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">🗑</button></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <div class="boards__item">
+                        <span contenteditable="true" class="title">Сделано - 4</span>
+                        <div class="list">
+                            {% for el in card_4 %}
+                            <div class="list__item" draggable="true">{{ el.text }}
+                                <div>
+                                    <a href="{% url 'update' pk=el.id%}"><button style="border-radius: 3px; background: rgb(135, 135, 220); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">⚙</button></a>
+                                    <a href="{% url 'delete' pk=el.id%}"><button style="border-radius: 3px; background: rgb(191, 75, 89); border: none;color: #fefefe; justify-content: center; align-items: center; width: 25px; height: 25px; margin-top: 10px; font-size: 18px;" type="submit">🗑</button></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
             </div>
-                <div class="button" type="submit">Добавить колонку</div>
         </div>
         <script src="{% static 'main/js/mainJS.js'%}"></script>
     </body>
